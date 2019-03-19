@@ -22,3 +22,36 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+year = datetime.now().year
+month = datetime.now().month
+cal = calendar.Calendar().itermonthdates(year, month)
+
+
+def get_cal(month=month, year=year):
+    months_dict = dict((v, k) for k, v in enumerate(calendar.month_abbr))
+    user_input = input(
+        "Enter: month [year] ").split()
+    if len(user_input) > 2:
+        print("Try input again..")
+    elif len(user_input) == 2:
+        [month, year] = [user_input[0][:3].lower(), int(user_input[1])]
+        for x in months_dict:
+            if type(x) != int:
+                if x.lower() == month:
+                    month = months_dict[x]
+                    print(calendar.TextCalendar(
+                        0).formatmonth(year, month))
+    elif len(user_input) == 1:
+        month = user_input[0][:3].lower()
+        for x in months_dict:
+            if type(x) != int:
+                if x.lower() == month:
+                    month = months_dict[x]
+                    print(calendar.TextCalendar(
+                        0).formatmonth(year, month))
+    else:
+        print(calendar.TextCalendar(0).formatmonth(year, month))
+
+
+get_cal()
