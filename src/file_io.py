@@ -23,4 +23,4 @@ print(read_data)
 bar = open("bar.txt", "w")
 for x in range(1, 21):
     linebreak = "\n"
-bar.write(f" {x} lines of arbitrary content to file bar! {linebreak}")
+    bar.write(f" {x} lines of arbitrary content to file bar! {linebreak}")
