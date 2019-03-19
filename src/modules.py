@@ -6,6 +6,7 @@ level operating system functionality.
 """
 
 import sys
+from sys import argv
 # See docs for the sys module: https://docs.python.org/3.7/library/sys.html
 
 # Print out the command line arguments in sys.argv, one per line:
@@ -18,6 +19,9 @@ print(sys.argv)
 # YOUR CODE HERE
 print("OS Platform--")
 print(sys.platform)
+
+print("sys.version")
+print(sys.version)
 
 # print("OS nmae--")
 # print(os.name)
@@ -46,3 +50,7 @@ print(os.getcwd())
 import system
 print("OS system--")
 print(platform.system())
+
+
+
+# from random import randint
