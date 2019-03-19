@@ -35,3 +35,18 @@ print(len(x))
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
+print({i * 1000 for i in x})
+print([i * 1000 for i in x])
+
+x
+for index in x:
+      print(index*1000)
+
+x.reverse()
+print([i * 1000 for i in x])
+
+for i in range(10, 0, -1):
+      print([i*1000])
+
+# for i in range(len(arr))
+# use -i for index
